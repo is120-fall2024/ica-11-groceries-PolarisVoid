@@ -39,13 +39,30 @@
 
   <main>
     <section id="item-add-container">
-      <!-- Grocery list item inputs go here -->
+        <label for="grocery-item">Item</label>
+        <input id="grocery-item" type="text">
+        <label for="grocery-quantity">Quantity</label>
+        <input id="grocery-quantity" type="number">
+        <label for="grocery-price">Price</label>
+        <input id="grocery-price" type="number">
+        <label for="grocery-category">Category</label>
+        <input id="grocery-category" type="dropdown">
+        <button class="btn btn-primary" id="addbutton" onclick="addItem()">Add Item</button>
     </section>
 
     <section id="list-container">
       <!-- UL for your grocery list -->
       <ul id="grocery-list"></ul>
       <!-- Quantity output, buy all and clear all bought buttons, and total price text go here -->
+      <div id="grocery-list-output">
+        <p>Groceries left to buy: <span id="totalCount">0</span></p>
+        <div class="container-fluid d-flex p-0">
+          <button class="container-fluid btn btn-primary" id="checkButton" onclick="toggleCheck()">Check All</button>
+          <button class="container-fluid btn btn-primary" onclick="clearAllBought()">Clear Bought Items</button>
+        </div>
+        <p>Total Price: $<span id="price">0</span></p>
+        <span id="totalPrice"></span>
+      </div>
     </section>
   </main>
 
