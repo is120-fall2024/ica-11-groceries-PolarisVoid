@@ -39,15 +39,34 @@
 
   <main>
     <section id="item-add-container">
-        <label for="grocery-item">Item</label>
-        <input id="grocery-item" type="text">
-        <label for="grocery-quantity">Quantity</label>
-        <input id="grocery-quantity" type="number">
-        <label for="grocery-price">Price</label>
-        <input id="grocery-price" type="number">
-        <label for="grocery-category">Category</label>
-        <input id="grocery-category" type="dropdown">
-        <button class="btn btn-primary" id="addbutton" onclick="addItem()">Add Item</button>
+      <form>
+        <div class="form-group row">
+          <label for="grocery-item">Item</label>
+          <input class="form-control" id="grocery-item" type="text"><br>
+        </div>
+        <div class="form-group row">
+          <label for="grocery-quantity">Quantity</label>
+          <input class="form-control" id="grocery-quantity" type="number">
+        </div>
+        <div class="form-group row">
+          <label for="grocery-price">Price</label>
+          <input class="form-control" id="grocery-price" type="number">
+        </div>
+        <div class="form-group row">
+          <label for="grocery-category">Category</label>
+          <select class="form-control" id="grocery-category">
+            <option value="produce" default>Produce</option>
+            <option value="dairy">Dairy</option>
+            <option value="meat">Meat</option>
+            <option value="bakery">Bakery</option>
+            <option value="frozen">Frozen</option>
+            <option value="canned">Canned</option>
+            <option value="dry">Dry</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary" id="addbutton" onclick="addItem()">Add Item</button>
+      </form>
     </section>
 
     <section id="list-container">
